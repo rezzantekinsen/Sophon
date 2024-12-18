@@ -15,7 +15,6 @@ struct SwiftUIView: View {
 
     var body: some View {
         VStack {
-            //hellodoiawdfoaiwdfwhoi
             ZStack {
                 Circle()
                     .fill(Color.bck1)
@@ -32,7 +31,8 @@ struct SwiftUIView: View {
                     .padding(.trailing, 38)
                     .offset(x: offset / 2)
             }
-            Button("Welcome!") {
+            Button("Welcome!"){
+    
                 withAnimation {
                     if offset > 0 {
                         offset = -100
@@ -41,6 +41,7 @@ struct SwiftUIView: View {
                     }
                 }
             }
+            .padding()
         }
         .onAppear {
                     startAnimationLoop()
